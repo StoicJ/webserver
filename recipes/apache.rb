@@ -1,5 +1,5 @@
 package "httpd" do
-  action install
+  action :install
 end
 
 file "/var/www/html/index.html" do
@@ -7,5 +7,5 @@ file "/var/www/html/index.html" do
 end
 
 service "httpd" do
-  action [ :enable, :start ]
+  action [:enable, :start]
 end
